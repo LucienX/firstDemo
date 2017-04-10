@@ -4,6 +4,13 @@ import java.util.List;
 
 import com.viva.lucien.model.User;
 
+/**
+ * 
+ * @author qiaoxing
+ *
+ * 下午4:20:15
+ * 业务逻辑接口
+ */
 public interface UserService {
 	User load(Long id);
 
