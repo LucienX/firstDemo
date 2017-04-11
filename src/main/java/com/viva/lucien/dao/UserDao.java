@@ -1,6 +1,7 @@
 package com.viva.lucien.dao;
 
 import com.viva.lucien.model.User;
+
 /**
  * 
  * @author qiaoxing
