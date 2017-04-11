@@ -32,11 +32,9 @@ public class test {
 
 	@Test
 	public void save() {
-		User user = new User();
+		User user=new User();
+		user.setName("555");
 		user.setRegisterTime(new Date());
-		user.setName("张三");
-		Long id=userService.save(user);
-		System.out.println(id);
-		LOGGER.info(JSON.toJSONString(id));
+		userService.save(user);
 	}
 }

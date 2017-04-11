@@ -23,43 +23,10 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 	@Override
-	public User load(Long id) {
-		return userDao.load(id);
+	public User save(User user) {
+		return (User) userDao.save(user);
 	}
 
-	@Override
-	public User get(Long id) {
-		return userDao.get(id);
-	}
-
-	@Override
-	public List<User> findAll() {
-		return userDao.findAll();
-	}
-
-	@Override
-	public void persist(User entity) {
-		userDao.persist(entity);
-	}
-
-	@Override
-	public Long save(User entity) {
-		return userDao.save(entity);
-	}
-
-	@Override
-	public void saveOrUpdate(User entity) {
-		userDao.saveOrUpdate(entity);
-	}
-
-	@Override
-	public void delete(Long id) {
-		userDao.delete(id);
-	}
-
-	@Override
-	public void flush() {
-		userDao.flush();
-	}
+	
 
 }

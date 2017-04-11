@@ -8,6 +8,6 @@ import com.viva.lucien.model.User;
  * 下午4:18:58
  * 用户接口类
  */
-public interface UserDao extends GenericDao<User, Long> {
+public interface UserDao extends BaseDao<User> {
 
 }

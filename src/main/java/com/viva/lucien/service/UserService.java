@@ -12,19 +12,5 @@ import com.viva.lucien.model.User;
  * 业务逻辑接口
  */
 public interface UserService {
-	User load(Long id);
-
-	User get(Long id);
-
-	List<User> findAll();
-
-	void persist(User entity);
-
-	Long save(User entity);
-
-	void saveOrUpdate(User entity);
-
-	void delete(Long id);
-
-	void flush();
+     public User save(User user);
 }
