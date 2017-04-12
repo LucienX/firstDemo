@@ -35,6 +35,7 @@ public class test {
 		User user=new User();
 		user.setName("555");
 		user.setRegisterTime(new Date());
-		userService.save(user);
+	User us=	userService.save(user);
+		System.out.println(us.getName());
 	}
 }
