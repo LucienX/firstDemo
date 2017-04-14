@@ -1,7 +1,5 @@
 package com.viva.lucien.service;
 
-import java.util.List;
-
 import com.viva.lucien.model.User;
 
 /**

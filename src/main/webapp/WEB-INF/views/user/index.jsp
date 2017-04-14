@@ -12,6 +12,11 @@
 </head>
 <body>
 
+<form action="create.do" method="post">
+<input type="text" name="name" />
+<button type="submit" >提交</button>
+</form>
+
 <button class="btn-danger" href="#">ddd</button>
   <hr>
   <footer>

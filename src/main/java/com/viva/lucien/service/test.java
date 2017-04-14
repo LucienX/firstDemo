@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.alibaba.fastjson.JSON;
+import com.viva.lucien.model.Baidu;
 import com.viva.lucien.model.User;
 
 
@@ -29,13 +30,16 @@ public class test {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private BaiduService baiduService;
 
 	@Test
 	public void save() {
-		User user=new User();
-		user.setName("555");
-		user.setRegisterTime(new Date());
-	User us=	userService.save(user);
-		System.out.println(us.getName());
+		Baidu news=new Baidu();
+		news.setTitle("sdsd");
+		news.setUrl("sdsdsd");
+	Baidu us=baiduService.save(news);
+		System.out.println(us.getTitle());
 	}
 }

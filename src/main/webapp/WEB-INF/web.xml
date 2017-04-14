@@ -76,10 +76,14 @@
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
-  
+	
+	<!-- 添加：增量数据抓取监听 -->  
+<!--    <listener>   
+       <listener-class>com.spider.utils.AutoRun</listener-class>   
+   </listener> -->
   
 	<welcome-file-list>
-		<welcome-file>/index.jsp</welcome-file>
+		<welcome-file>/index.html</welcome-file>
 	</welcome-file-list>
 	
 </web-app>
