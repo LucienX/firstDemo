@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.viva.lucien.model.User;
 import com.viva.lucien.service.UserService;
@@ -38,4 +39,29 @@ public class UserController {
 		return 	userService.save(user);
 		
 	}
+	
+	
+	@RequestMapping(value="/register.do",method=RequestMethod.POST)
+	private ModelAndView register(String name){
+		 ModelAndView mav=null;  
+		User user=new User();
+		user.setName(name);
+			/*	userService.save(user);*/
+		 //  request.setAttribute("user", user);  
+	try {
+			  mav = new ModelAndView();  
+		        mav.setViewName("success");  
+		        mav.addObject("user", user);  
+		        mav.addObject("msg", "注册成功了，可以去登陆了");  
+		        return mav;
+		}catch (Exception e) {
+				mav.setViewName("error");  
+		        mav.addObject("user", null);  
+		        mav.addObject("msg", "注册失败");  
+		        return mav;  
+		}
+		
+	}
+	
+	
 }
